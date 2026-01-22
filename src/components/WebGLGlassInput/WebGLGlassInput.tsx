@@ -1,10 +1,6 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import styles from './WebGLGlassInput.module.scss';
-import {
-  createEmptyTexture,
-  loadTextureFromURL,
-  MultiPassRenderer,
-} from '@/utils/GLUtils';
+import { MultiPassRenderer } from '@/utils/GLUtils';
 import { computeGaussianKernelByRadius } from '@/utils';
 
 import VertexShader from '@/shaders/vertex.glsl?raw';
@@ -218,8 +214,8 @@ export function WebGLGlassInput({
         ref={canvasRef}
         className={styles.webglCanvas}
         style={{
-          ['--dpr' as string]: window.devicePixelRatio || 1,
-        }}
+          ['--dpr']: window.devicePixelRatio || 1,
+        } as CSSProperties}
       />
       <input
         ref={inputRef}
