@@ -18,6 +18,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'index.html'),
         glassInput: path.resolve(__dirname, 'glass-input.html'),
+        webglGlassInput: path.resolve(__dirname, 'webgl-glass-input.html'),
       },
     },
   },
