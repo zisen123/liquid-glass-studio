@@ -41,6 +41,12 @@ export default {
     'editor.import': '导入预设',
     'editor.importSuccessMessage': '预设导入成功！',
     'editor.importFailedMessage': (message: string) => `导入失败：${message}`,
+    'editor.backgroundOpacity': '背景透明度',
+    'editor.blurAmount': '模糊量',
+    'editor.borderOpacity': '边框透明度',
+    'editor.borderRadius': '边框圆角',
+    'editor.shadowIntensity': '阴影强度',
+    'editor.focusBorderColor': '焦点边框颜色',
   },
   ['en-US']: {
     '_settings': {
@@ -84,6 +90,12 @@ export default {
     'editor.import': 'Import Preset',
     'editor.importSuccessMessage': 'Preset imported successfully!',
     'editor.importFailedMessage': (message: string) => `Import failed: ${message}`,
+    'editor.backgroundOpacity': 'Background Opacity',
+    'editor.blurAmount': 'Blur Amount',
+    'editor.borderOpacity': 'Border Opacity',
+    'editor.borderRadius': 'Border Radius',
+    'editor.shadowIntensity': 'Shadow Intensity',
+    'editor.focusBorderColor': 'Focus Border Color',
   },
   ['uz-UZ']: {
     '_settings': {
@@ -127,5 +139,11 @@ export default {
     "editor.import": "Presetni import qilish",
     "editor.importSuccessMessage": "Preset muvaffaqiyatli import qilindi!",
     "editor.importFailedMessage": (message: string) => `Import failed: ${message}`,
+    "editor.backgroundOpacity": "Fon shaffofligi",
+    "editor.blurAmount": "Xiralashish miqdori",
+    "editor.borderOpacity": "Chegara shaffofligi",
+    "editor.borderRadius": "Chegara radiusi",
+    "editor.shadowIntensity": "Soya kuchi",
+    "editor.focusBorderColor": "Fokus chegarasi rangi",
   }
 }

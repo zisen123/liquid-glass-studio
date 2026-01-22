@@ -1,0 +1,187 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  left: 50%;
+  top: 12px;
+  padding: 8px 12px;
+  gap: 8px;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color-fore);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  align-items: center;
+  font-family: sans-serif;
+  z-index: 1000;
+
+  .logoWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .subtitle {
+    color: rgba(white, 0.75);
+    font-style: italic;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .button,
+    .button > svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .button {
+      color: white;
+      cursor: pointer;
+      &:hover {
+        color: rgb(150, 186, 222);
+      }
+    }
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  padding: 100px 20px 40px;
+}
+
+.demoCard {
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  background: rgba(71, 71, 87, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.demoTitle {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 16px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.demoDescription {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.inputSection {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.valueDisplay {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: monospace;
+  font-size: 14px;
+
+  .label {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .value {
+    color: rgba(150, 186, 222, 1);
+    font-weight: 500;
+  }
+}
+
+.features {
+  margin-top: 32px;
+}
+
+.featuresTitle {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  li {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid rgba(150, 186, 222, 0.5);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@media (max-width: 768px) {
+  .demoCard {
+    padding: 24px;
+  }
+
+  .demoTitle {
+    font-size: 24px;
+  }
+
+  .demoDescription {
+    font-size: 14px;
+  }
+}
+
+// Leva panel styling
+:global(#root > div[class^='leva-']) {
+  background-color: rgba(0, 11, 36, 0.4);
+  & > div:last-child {
+    background-color: rgba(0, 9, 30, 0.6);
+  }
+}
