@@ -177,3 +177,11 @@
     font-size: 14px;
   }
 }
+
+// Leva panel styling
+:global(#root > div[class^='leva-']) {
+  background-color: rgba(0, 11, 36, 0.4);
+  & > div:last-child {
+    background-color: rgba(0, 9, 30, 0.6);
+  }
+}

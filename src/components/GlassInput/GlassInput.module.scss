@@ -10,14 +10,14 @@
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   
-  /* Glass morphism effect */
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* Glass morphism effect - using CSS variables for customization */
+  background: rgba(255, 255, 255, var(--bg-opacity, 0.1));
+  backdrop-filter: blur(var(--blur-amount, 10px));
+  -webkit-backdrop-filter: blur(var(--blur-amount, 10px));
   
   /* Border */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, var(--border-opacity, 0.2));
+  border-radius: var(--border-radius, 12px);
   
   /* Text styling */
   color: white;
@@ -25,7 +25,7 @@
   
   /* Shadow for depth */
   box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    0 8px 32px 0 rgba(31, 38, 135, var(--shadow-intensity, 0.37)),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   
   /* Smooth transitions */
@@ -36,19 +36,19 @@
   }
   
   &:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, calc(var(--bg-opacity, 0.1) + 0.05));
+    border-color: rgba(255, 255, 255, calc(var(--border-opacity, 0.2) + 0.1));
     box-shadow: 
-      0 8px 32px 0 rgba(31, 38, 135, 0.5),
+      0 8px 32px 0 rgba(31, 38, 135, calc(var(--shadow-intensity, 0.37) + 0.13)),
       inset 0 0 0 1px rgba(255, 255, 255, 0.15);
   }
   
   &:focus {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(150, 186, 222, 0.5);
+    background: rgba(255, 255, 255, calc(var(--bg-opacity, 0.1) + 0.1));
+    border-color: color-mix(in srgb, var(--focus-border-color, rgb(150, 186, 222)) 50%, transparent);
     box-shadow: 
-      0 8px 32px 0 rgba(31, 38, 135, 0.6),
-      0 0 0 3px rgba(150, 186, 222, 0.2),
+      0 8px 32px 0 rgba(31, 38, 135, calc(var(--shadow-intensity, 0.37) + 0.23)),
+      0 0 0 3px color-mix(in srgb, var(--focus-border-color, rgb(150, 186, 222)) 20%, transparent),
       inset 0 0 0 1px rgba(255, 255, 255, 0.2);
   }
 }
