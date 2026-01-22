@@ -16,11 +16,12 @@ export function GlassInputDemo() {
         </div>
         <div className={styles.content}>
           <span>
-            by <a>iyinchao</a>
+            by <span>iyinchao</span>
           </span>
           <a
             href="https://github.com/iyinchao/liquid-glass-studio"
             target="_blank"
+            rel="noopener noreferrer"
             className={styles.button}
           >
             <GitHubIcon />
@@ -28,6 +29,7 @@ export function GlassInputDemo() {
           <a
             href="https://x.com/charles_yin/status/1936338569267986605"
             target="_blank"
+            rel="noopener noreferrer"
             className={styles.button}
           >
             <XIcon></XIcon>
